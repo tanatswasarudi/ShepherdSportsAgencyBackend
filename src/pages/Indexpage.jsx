@@ -66,12 +66,12 @@ const DataProduct = useSelector((state)=>state.product.productList)
 
           <div className='mt-10 px-4 flex flex-col w-full'>
             <h1 className='text-3xl font-serif font-bold py-4 text-black'>Popular Clubs</h1>
-            <div className='grid md:grid-cols-4 grid-cols-1 gap-6  overflow-scroll scrollbar-none w-full'> 
+            <div className='grid md:grid-cols-4 grid-cols-1  gap-6  overflow-scroll scrollbar-none w-full'> 
            
-           <div className='min-w-[300px] max-w-[300px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={platnum} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>FC Platnum</p></div> 
-           <div className='min-w-[300px] max-w-[300px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={dembare} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Dynamos FC</p></div> 
-           <div className='min-w-[300px] max-w-[300px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={ngezi} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Ngezi Platnum</p></div>  
-           <div className='min-w-[300px] max-w-[300px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={landers} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Highlanders FC</p></div> 
+           <div className='min-w-[280px] max-w-[280px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[200px] '><img src={platnum} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>FC Platnum</p></div> 
+           <div className='min-w-[280px] max-w-[280px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[200px] '><img src={dembare} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Dynamos FC</p></div> 
+           <div className='min-w-[280px] max-w-[280px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[200px] '><img src={ngezi} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Ngezi Platnum</p></div>  
+           <div className='min-w-[280px] max-w-[280px] shadow border-t hover:bg-slate-400 border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[200px] '><img src={landers} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Highlanders FC</p></div> 
             </div>
           </div>
 
