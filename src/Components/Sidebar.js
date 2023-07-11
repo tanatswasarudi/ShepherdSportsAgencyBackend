@@ -45,7 +45,7 @@ const Sidebar = () => {
        </div>
 
        <ul className='mt-6'>
-             <li className={` text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><FaUserAlt className='text-3xl'/>SignIn</li>
+             <Link to={"register"} className={` text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><FaUserAlt className='text-3xl'/>SignIn</Link>
              {userData.name ? (
                 <Link to={"/"} className={` text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}> onClick={handleLogout} <span className="text-sm font-bold">{userData.name}</span><BiUserMinus className='text-3xl'/>Logout </Link>
                   ) : (
