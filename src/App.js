@@ -40,11 +40,11 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', minWidth: '100vh' }}>
     <Header  />
-    <main className="flex flex-grow pt-20 min-h-[calc(100vh)]">
+    <main className="flex flex-grow pt-20 min-h-[calc(100vh)] overflow-scroll scrollbar-none">
       <div className=""> 
         <Sidebar />
       </div>
-      <div className="flex-grow md:p-7 overflow-scroll scrollbar-none">
+      <div className="flex-grow md:p-7 ">
         <Outlet />
         <ToastContainer {...toastOptions} />
       </div>
