@@ -38,7 +38,7 @@ function App() {
     toastClassName: 'custom-toast-container',
   };
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', minWidth: '100vh' }}>
     <Header  />
     <main className="flex flex-grow pt-20 min-h-[calc(100vh)]">
       <div className=""> 
