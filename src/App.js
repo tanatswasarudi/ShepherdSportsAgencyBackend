@@ -44,7 +44,7 @@ function App() {
       <div className=""> 
         <Sidebar />
       </div>
-      <div className="flex-grow md:p-7">
+      <div className="flex-grow md:p-7 overflow-scroll scrollbar-none">
         <Outlet />
         <ToastContainer {...toastOptions} />
       </div>
