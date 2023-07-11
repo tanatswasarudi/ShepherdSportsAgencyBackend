@@ -79,9 +79,9 @@ const DataProduct = useSelector((state)=>state.product.productList)
             <h1 className='text-3xl font-serif font-bold py-4 text-black'>Popular Sponsors</h1>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-6  overflow-scroll scrollbar-none min-w-[300px] max-w-[300px] '> 
             
-           <div className='shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={zim} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Castle Lager Premier Soccer League</p></div> 
-           <div className='shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={zifa} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Zim Football Association</p></div>  
-           <div className='shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={mbada} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Mbada Diamond</p></div> 
+           <div className='min-w-[300px] max-w-[300px] shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={zim} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Castle Lager Premier Soccer League</p></div> 
+           <div className='min-w-[300px] max-w-[300px] shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={zifa} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Zim Football Association</p></div>  
+           <div className='min-w-[300px] max-w-[300px] shadow bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={mbada} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-base'>Mbada Diamond</p></div> 
             </div>
             
           </div>
