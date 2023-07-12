@@ -143,7 +143,7 @@ if (productId) {
               <h3>{getProductNameById(productId)}</h3>
               <button
                 onClick={() => handleProductDeselect(productId)}
-                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+                className="bg-red-500 hover:bg-red-600 text-white px-4 mt-4 py-2 rounded"
               >
                 Deselect
               </button>

@@ -48,7 +48,7 @@ const ProductComponent = () => {
         {searchResults.length > 0 ? (
   <div>
     <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
-    <div>
+    <div className='flex flex-wrap gap-y-7 w-full gap-6 p-4 px-2'>
       {searchResults.map((product) => (
         <div key={product.id} className=' bg-slate-dark-purple p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none'>
         <Link to={ `/booking/${product.id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
@@ -68,7 +68,7 @@ const ProductComponent = () => {
     </div>
   </div>
 ) : (
-  <div className='bg-blue-900 rounded justify-center mt-5 shadow shadow-black '>
+  <div className='bg-blue-900 rounded justify-center shadow w-[240px] shadow-black mt-10'>
    <h1 className='font-sans text-lg'>We are working on your search results <BiLoaderCircle/></h1>
   </div>
 )}
