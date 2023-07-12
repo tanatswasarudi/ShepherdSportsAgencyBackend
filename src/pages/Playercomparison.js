@@ -51,7 +51,7 @@ if (productId) {
 
   return (
     <div className=''>
-      <div className="mt-10 flex flex-col mx-auto max-w-lg">
+      <div className="mt-10 flex flex-col mx-auto ">
         <input
         type="text"
         value={searchQuery}
@@ -111,7 +111,6 @@ if (productId) {
           </div>
           <h2 className='text-lg font-serif font-bold text-red-950'>{product.title}</h2>
           <p className='flex items-center font-bold my-2 gap-2'>TEAM: {product.club}</p>
-          <p className="flex items-center font-bold my-2 gap-2">AGE: {product.age}</p>
           <p className="flex items-center font-bold my-2 gap-2">POSITION: <span className="capitalize">{product.category}</span> </p>
           <p className="flex items-center font-bold my-2 gap-2">GOALS: <span className="capitalize">{product.goals}</span> </p>
           <p className="flex items-center font-bold my-2 gap-2">ASSISTS: <span className="capitalize">{product.assists}</span> </p>
