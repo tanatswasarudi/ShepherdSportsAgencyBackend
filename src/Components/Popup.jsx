@@ -18,7 +18,7 @@ const Popup = () => {
 
   return (
     <div className={`popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border border-gray-300 p-6 z-10 ${showPopup ? 'block' : 'hidden'}`}>
-      <div className="md:h-[800px] h-[400px] md:w-[800px] w-[400px]">
+      <div className="md:mt-4 md:h-[800px] h-[400px] md:w-[800px] w-[400px]">
         <img src={popupmessage} onClick={handleClose} alt="" className="w-full" />
       </div>
     </div>
