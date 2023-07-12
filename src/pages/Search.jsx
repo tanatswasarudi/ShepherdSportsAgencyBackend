@@ -6,7 +6,9 @@ import {
     fetchProductData,
     clearSearchResults
   } from '../redux/productSlide';
-  import AllProduct from '../Components/AllProducts';
+  import { Link} from 'react-router-dom'
+  import {BiLoaderCircle} from 'react-icons/bi'
+  import {CiCircleMore} from 'react-icons/ci'
 
 
 const ProductComponent = () => {
@@ -43,40 +45,37 @@ const ProductComponent = () => {
         >
           Search
         </button>
-      </div>
-    
-      {searchResults.length > 0 ? (
-        <div>
-          <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
-          <div key={product.id} className=' bg-slate-200 p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none'>
-          <Link to={ `/booking/${product.id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
-          <div className="w-[260px] min-h-[200px] px-2 rounded-2xl">
-            <img src={product.photos[0]} className="h-full w-full" alt="" />
-          </div>
-          <h2 className='text-lg font-serif font-bold text-red-950'>{product.title}</h2>
-          <p className='flex items-center font-bold font-serif my-2 gap-2'>TEAM: {product.club}</p>
-          <p className="flex items-center font-bold font-serif my-2 gap-2">AGE: {product.age}</p>
-          <p className="flex items-center font-bold font-serif my-2 gap-2">GOALS: {product.goals}</p>
-          <p className="flex items-center font-bold font-serif my-2 gap-2">ASSISTS: {product.assists}</p>
-          <p className="flex items-center font-bold font-serif my-2 gap-2">POSITION: <span className="capitalize">{product.category}</span> </p>
-          <button className="w-[150px]  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary">More</button>
-          </Link>
+        {searchResults.length > 0 ? (
+  <div>
+    <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
+    <div>
+      {searchResults.map((product) => (
+        <div key={product.id} className=' bg-slate-dark-purple p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none'>
+        <Link to={ `/booking/${product.id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
+        <div className="w-[260px] min-h-[200px] px-2 rounded-2xl">
+          <img src={product.photos[0]} className="h-full w-full" alt="" />
         </div>
+        <h2 className='text-lg font-serif font-bold text-red-950'>{product.title}</h2>
+        <p className='flex items-center font-bold font-serif my-2 gap-2'>TEAM: {product.club}</p>
+        <p className="flex items-center font-bold font-serif my-2 gap-2">AGE: {product.age}</p>
+        <p className="flex items-center font-bold font-serif my-2 gap-2">GOALS: {product.goals}</p>
+        <p className="flex items-center font-bold font-serif my-2 gap-2">ASSISTS: {product.assists}</p>
+        <p className="flex items-center font-bold font-serif my-2 gap-2">POSITION: <span className="capitalize">{product.category}</span> </p>
+        <button className="w-[150px]  p-2 flex items-center rounded-full border-t border-yellow-500 shadow bg-primary">View More<CiCircleMore className=' text-gray-500'/></button>
+        </Link>
         </div>
-      ) : (
-        <div>
-          <h2 className="text-lg font-semibold mt-4">All Players:</h2>
-          <div className=''>
-          <AllProduct />
-          </div>
-        </div>
-      )}
+      ))}
     </div>
-    
-    );
-  };
+  </div>
+) : (
+  <div className='bg-blue-900 rounded justify-center mt-5 shadow shadow-black '>
+   <h1 className='font-sans text-lg'>We are working on your search results <BiLoaderCircle/></h1>
+  </div>
+)}
 
-export default ProductComponent
+      </div>
+      </div>
+    )
+    }
+export default ProductComponent;
 
-
-  

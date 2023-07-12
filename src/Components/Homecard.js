@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {CiCircleMore} from 'react-icons/ci'
 
 const Homecard = ({ title, photos, age,club,category, loadingArray,id }) => {
   return (
@@ -14,7 +15,7 @@ const Homecard = ({ title, photos, age,club,category, loadingArray,id }) => {
           <p className='flex items-center font-bold my-2 gap-2'>TEAM: {club}</p>
           <p className="flex items-center font-bold my-2 gap-2">AGE: {age}</p>
           <p className="flex items-center font-bold my-2 gap-2">POSITION: <span className="capitalize">{category}</span> </p>
-          <button className="w-[150px]  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary">View more</button>
+          <button className="w-[150px] flex  p-2 items-center rounded-full border-t border-yellow-500 shadow bg-primary">View more<CiCircleMore className='text-gray-500'/></button>
           </Link>
         </>
       )
