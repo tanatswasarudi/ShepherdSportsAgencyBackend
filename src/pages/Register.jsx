@@ -83,7 +83,7 @@ const Register = () => {
             </span>
             </div>
        
-        <button className='primary'>Register</button>
+        <button className='bg-primary hover:bg-red-500 p-2 rounded'>Register</button>
         <p className='mt-4 px-2'>Already Have an Account ? <Link to='/login' className='text-blue-500'>Login</Link> </p>
       </form>
       </div>

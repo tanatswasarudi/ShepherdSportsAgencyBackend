@@ -11,8 +11,7 @@ import zim from "../Components/assets/PSL.png"
 import career from "../Components/assets/playerdevelopment.jpg"
 import skill from "../Components/assets/skill.jpg"
 import transfers from "../Components/assets/career2.jpg"
-
-
+import Popup from '../Components/Popup'
 
 const IndexPage = () => {
 const DataProduct = useSelector((state)=>state.product.productList)
@@ -23,6 +22,7 @@ const DataProduct = useSelector((state)=>state.product.productList)
   
   return (
     <div className=''> 
+    <Popup />
     <div className='flex flex-wrap gap-y-7 w-full gap-6 p-4 px-2 '>
           {
             homeProductCartList[0] ?

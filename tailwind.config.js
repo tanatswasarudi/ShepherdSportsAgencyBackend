@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-     "./src/**/*.{js,jsx,ts,tsx}",
+    './src/**/*.js', './src/**/*.jsx', './src/**/*.html'
   ],
   theme: {
     extend: {
@@ -14,6 +14,8 @@ module.exports = {
   },
   plugins: [
     require('tailwind-scrollbar'),
+    require('tailwindcss'), 
+    require('autoprefixer')
   ],
 }
 
