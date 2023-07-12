@@ -34,7 +34,7 @@ export const productSlice = createSlice({
 
 export const fetchProductData = (searchQuery) => async (dispatch) => {
   try {
-    let url = `${process.env.REACT_APP_SERVER_DORMIN}/players`;
+    let url = `${process.env.REACT_APP_SERVER_DORMIN}/soccer`;
 
     // If a search query is provided, append it to the URL
     if (searchQuery) {
