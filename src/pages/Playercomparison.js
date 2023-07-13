@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
-import {selectProduct, fetchProductData, clearSearchResults} from '../redux/productSlide';
-import AllProduct from '../Components/AllProducts';
+import {selectProduct, fetchProductData, deselectProduct, clearSearchResults} from '../redux/productSlide';
+
 
 
 const ProductComponent = () => {
@@ -29,7 +29,9 @@ const ProductComponent = () => {
     }
   };
   
-  
+  const handleProductDeselect = (productId) => {
+    dispatch(deselectProduct({ productId }));
+  };
   
 
   const getProductNameById = (productId) => {
@@ -106,11 +108,37 @@ if (productId) {
       ) : (
         
           <div>
-            <AllProduct/>
+            <AllProducts/>
           </div>
          
+
       )}
 
+{selectedProducts.length > 0 && (
+  <div className='my-2'>
+    <h2 className="text-xl font-bold mb-4">Selected Products for Comparison:</h2>
+    {selectedProducts.map((productId) => {
+      const product = productList.find((p) => p.id === productId);
+      if (!product) return null; // Skip rendering if the product is not found
+      return (
+        <div key={productId} className="flex items-center justify-between">
+          <h3>{product.name}</h3>
+          <button
+            onClick={() => handleProductDeselect(productId)}
+            className="bg-red-500 hover:bg-red-600 text-white px-4 mt-4 py-2 rounded"
+          >
+            Deselect
+          </button>
+        </div>
+      );
+    })}
+    {selectedProducts.length >= 2 && (
+      <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 my rounded">
+        Compare
+      </button>
+    )}
+  </div>
+)}
 
     </div>
   );
