@@ -24,12 +24,15 @@ const ProductComponent = () => {
   };
 
   const handleProductSelect = (productId) => {
-    dispatch(selectProduct({ productId }));
+    if (!selectedProducts.includes(productId)) {
+      dispatch(selectProduct({ productId }));
+    }
   };
-
+  
   const handleProductDeselect = (productId) => {
     dispatch(deselectProduct({ productId }));
   };
+  
 
   const getProductNameById = (productId) => {
     // Replace this with your own logic to retrieve the product name based on the ID
@@ -51,7 +54,7 @@ if (productId) {
 
   return (
     <div className=''>
-      <div className="mt-10 flex flex-col mx-auto ">
+      <div className="mt-10 flex flex-col mx-auto max-w-lg">
         <input
         type="text"
         value={searchQuery}
@@ -134,28 +137,32 @@ if (productId) {
         </div>
       )}
 
-      {selectedProducts.length > 0 && (
-        <div className='grid grid-cols-2 items-center'>
-          <h2 className="text-xl font-bold mb-4">Selected Products for Comparison:</h2>
-          {selectedProducts.map((productId) => (
-            <div key={productId} className="flex items-center justify-between ">
-              <h3>{getProductNameById(productId)}</h3>
-              <button
-                onClick={() => handleProductDeselect(productId)}
-                className="bg-red-500 hover:bg-red-600 text-white px-4 mt-4 py-2 rounded"
-              >
-                Deselect
-              </button>
-            </div>
-          ))}
-          <div>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
-            Compare
+{selectedProducts.length > 0 && (
+  <div>
+    <h2 className="text-xl font-bold mb-4">Selected Products for Comparison:</h2>
+    {selectedProducts.map((productId) => {
+      const product = productList.find((p) => p.id === productId);
+      if (!product) return null; // Skip rendering if the product is not found
+      return (
+        <div key={productId} className="flex items-center justify-between">
+          <h3>{product.name}</h3>
+          <button
+            onClick={() => handleProductDeselect(productId)}
+            className="bg-red-500 hover:bg-red-600 text-white px-4 mt-4 py-2 rounded"
+          >
+            Deselect
           </button>
-          </div>
-          
         </div>
-      )}
+      );
+    })}
+    {selectedProducts.length >= 2 && (
+      <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+        Compare
+      </button>
+    )}
+  </div>
+)}
+
     </div>
   );
 };
