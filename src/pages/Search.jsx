@@ -50,7 +50,7 @@ const ProductComponent = () => {
     <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
     <div className='flex flex-wrap gap-y-7 w-full gap-6 p-4 px-2'>
       {searchResults.map((product) => (
-        <div key={product.id} className=' bg-slate-dark-purple p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none'>
+        <div key={product._id} className=' bg-slate-dark-purple p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none'>
         <Link to={ `/booking/${product._id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
         <div className="w-[260px] min-h-[200px] px-2 rounded-2xl">
           <img src={product.photos[0]} className="h-full w-full" alt="" />

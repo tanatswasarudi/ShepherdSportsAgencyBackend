@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
 import {selectProduct, fetchProductData, deselectProduct, clearSearchResults} from '../redux/productSlide';
-
+import AllProducts from '../Components/AllProducts';
 
 
 const ProductComponent = () => {
@@ -133,7 +133,7 @@ if (productId) {
       );
     })}
     {selectedProducts.length >= 2 && (
-      <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 my rounded">
+      <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
         Compare
       </button>
     )}
