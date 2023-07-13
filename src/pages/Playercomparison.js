@@ -56,12 +56,12 @@ if (productId) {
 
   return (
     <div className=''>
-      <div className="mt-10 flex flex-col mx-auto max-w-lg">
+      <div className="mt-10 flex flex-col  w-full">
         <input
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="border border-gray-300 rounded px-4 py-2 mb-4"
+        className="border border-gray-300 rounded w-[280px] px-4 py-2 mb-4"
         placeholder="Search products"
       />
       <button
