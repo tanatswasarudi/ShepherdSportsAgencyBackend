@@ -48,7 +48,7 @@ const Login = () => {
                     toast.success(responseData.message);
                     dispatch(loginRedux(responseData ))
                     // Navigate to the home page
-                    navigate('/account');
+                    navigate('/players');
                     console.log(userData)
 
                   } else {
