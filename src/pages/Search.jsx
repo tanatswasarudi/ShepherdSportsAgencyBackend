@@ -31,7 +31,7 @@ const ProductComponent = () => {
     };
   
     return (
-      <div className="container mx-auto p-4">
+      <div className="container p-4">
       <div className="mb-4">
         <input
           type="text"

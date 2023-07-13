@@ -45,22 +45,22 @@ const Sidebar = () => {
        </div>
 
        <ul className='mt-6'>
-             <Link to={"register"} className={` text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><FaUserAlt className='text-3xl'/>SignIn</Link>
+             <Link to={"register"} className={` text-sm font-bold font-sans flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><FaUserAlt className='text-3xl'/>SignIn</Link>
              {userData.name ? (
-                <Link to={"/"} className={` text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}> onClick={handleLogout} <span className="text-sm font-bold">{userData.name}</span><BiUserMinus className='text-3xl'/>Logout </Link>
+                <p className={`font-sans font-bold text-sm flex items-center  gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><BiUserMinus onClick={handleLogout} className='text-3xl'/>Logout  <span className="text-sm font-bold">{userData.name}</span> </p>
                   ) : (
-                    <Link to={"login"}className={`text-sm  flex items-center gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><BiSolidUserCircle className='text-3xl'/>Login</Link>
+                    <Link to={"login"}className={`text-sm font-sans font-bold flex items-center gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}><BiSolidUserCircle className='text-3xl'/>Login</Link>
                   )}
                   {
                     userData.email === process.env.REACT_APP_ADMIN_EMAIL && (
-                      <Link to={"players"} className={`text-sm  flex items-center gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}>
+                      <Link to={"players"} className={`text-sm font-bold font-sans flex items-center gap-x-4 cursor-pointer p-2 ${!open && "hidden"}`}>
                       <GiSoccerKick className='text-3xl'/>
                           Add Players
                     </Link>
                     )
                   } 
-                    <li className={` text-sm flex items-center  gap-x-2 cursor-pointer p-2 ${!open && "hidden"}`}><FaWhatsappSquare onClick={connectWithWhatsApp} className='text-green-500 text-3xl' /> WhatsApp Us</li> 
-                    <li className={` text-sm flex items-center  gap-x-2 cursor-pointer p-2 ${!open && "hidden"} `}><IoMdCall onClick={handleCallRequest}  className='text-blue-500 text-3xl'/> Call Us</li>        
+                    <li className={`font-sans font-bold text-sm flex items-center  gap-x-2 cursor-pointer p-2 ${!open && "hidden"}`}><FaWhatsappSquare onClick={connectWithWhatsApp} className='text-green-500 text-3xl' /> Contact Us</li> 
+                    <li className={`font-sans font-bold text-sm flex items-center  gap-x-2 cursor-pointer p-2 ${!open && "hidden"} `}><IoMdCall onClick={handleCallRequest}  className='text-blue-500 text-3xl'/> Call Us</li>        
                   <Link to={"playercomparison"}  className={` text-sm flex items-center mt-8  gap-x-2 cursor-pointer p-2 `}><TbSoccerField className='text-3xl text-green-500 hover:text-red-900 '/></Link>
                   <Link to={"search"}  className={` text-sm flex items-center mt-8  gap-x-2 cursor-pointer p-2 `}><AiOutlineSearch className='text-3xl text-primary hover:text-red-900'/></Link>
                   <Link to={"players"}  className={` text-sm flex items-center mt-8  gap-x-2 cursor-pointer p-2`}><GiSoccerKick className='text-3xl text-red-500 hover:text-red-900'/></Link>

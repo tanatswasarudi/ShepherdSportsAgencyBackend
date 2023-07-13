@@ -66,7 +66,7 @@ const Header = () => {
               <div className="absolute  bg-dark-purple right-2 py-1 font-serif w-36 flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">
                 <nav className="flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 ">
                 {userData.email === process.env.REACT_APP_ADMIN_EMAIL && (
-                  <Link to={"addplayers"} className="   hover:text-cyan-900 ">
+                  <Link to={"addplayers"} className=" mb-6 hover:text-cyan-900 ">
                     <BsDatabaseFillAdd/>
                   Add Players
                   </Link> 
@@ -74,11 +74,11 @@ const Header = () => {
 
                 {userData.name ? (
                   <p
-                    className=""
+                    className="mb-6"
                     onClick={handleLogout}
                   >
                     {" "}
-                    <BiUserMinus/>
+                    <BiUserMinus className="text-lg"/>
                    <span className="text-sm mb-6">Logout({userData.name}){" "}</span>
                   </p>
                 ) : (
