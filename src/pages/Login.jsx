@@ -89,7 +89,7 @@ const Login = () => {
             </span>
             </div>
        
-       <span className='mt-6 px-10'> <button className='bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-950'>Login</button></span>
+       <span className='mt-6 px-20'> <button className='bg-emerald-500 text-white px-6 py-2 rounded hover:bg-emerald-950'>Login</button></span>
         <p className='mt-4 px-2'>Don't Have an Account ? <Link to='/register' className='text-blue-500'>Register</Link> </p>
       </form>
       </div>
