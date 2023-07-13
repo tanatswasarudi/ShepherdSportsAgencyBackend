@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
 import {selectProduct, fetchProductData, deselectProduct, clearSearchResults} from '../redux/productSlide';
-import AllProducts from '../Components/AllProducts';
+import career from "../Components/assets/playerdevelopment.jpg"
+import skill from "../Components/assets/skill.jpg"
+import transfers from "../Components/assets/career2.jpg"
 
 
 const ProductComponent = () => {
@@ -75,7 +77,7 @@ if (productId) {
         <div>
           <h2 className="text-xl font-bold mb-4">Search Results:</h2>
           {searchResults.map((product) => (
-            <div className=''>
+            <div className='flex flex-wrap gap-y-7 w-full gap-6 p-4 px-2'>
               <div key={product.id} className=" bg-dark-purple p-2 rounded-2xl shadow shadow-black w-full min-w-[280px] max-w-[280px]  flex flex-col overflow-scroll scrollbar-none">
           <div className="w-[260px] min-h-[200px] px-2 rounded-2xl">
             <img src={product.photos[0]} className="h-full w-full" alt="" />
@@ -108,7 +110,15 @@ if (productId) {
       ) : (
         
           <div>
-            <AllProducts/>
+            <div className='mt-10 px-4 flex flex-col w-full'>
+            <h1 className='text-3xl font-serif font-bold py-4 text-black'>Our Focus</h1>
+            <div className='grid md:grid-cols-3 grid-cols-1 gap-6 overflow-scroll scrollbar-none'> 
+           
+           <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={career} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-lg'>Career Development</p><p className='text-sm text-gray-500'>At times having skill is not enough but you need a career</p></div> 
+           <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={skill} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-lg'>Skill Enhancement</p><p className='text-sm text-gray-500'>We will develop and improve your skills</p></div>  
+           <div className='min-w-[300px] max-w-[300px] shadow border-t border-primary bg-slate-200 rounded flex flex-col items-center px-2'><div className='w-[260px] h-[180px] '><img src={transfers} className='w-full h-full' alt=''/></div><p className='mt-2 font-sans text-lg'>Player Transfers</p><p className='text-sm text-gray-500'>We will help you knock your doors into different clubs</p></div> 
+            </div>
+          </div>
           </div>
          
 
